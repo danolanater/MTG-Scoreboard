@@ -122,6 +122,13 @@
                     android:textAlignment="center"
                     android:textSize="56sp" />
 
+                <Button
+                    android:onClick="draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Draw" />
+
 
 
             </LinearLayout>
@@ -217,24 +224,18 @@
         android:orientation="horizontal">
 
         <Button
+            android:onClick="newMatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Save" />
+            android:text="New Match" />
 
         <Button
             android:onClick="reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Reset" />
-
-        <Button
-            android:onClick="draw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Draw" />
+            android:text="New Game" />
 
         <Button
             android:layout_width="wrap_content"

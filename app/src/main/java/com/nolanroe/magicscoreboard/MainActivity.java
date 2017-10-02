@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         p2MatchScore.setText(String.valueOf(matchScore));
     }
 
-    public void displayDraws(int draws) {
+    public <T> void displayDraws(T draws) {
         TextView drawsView = (TextView) findViewById(R.id.draws_view);
         drawsView.setText(String.valueOf(draws));
     }
@@ -49,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
         player2Score = 20;
         displayP1Score(player1Score);
         displayP2Score(player2Score);
+    }
+
+    public void newMatch(View view) {
+        player1Score = 20;
+        player2Score = 20;
+        player1GameScore = 0;
+        player2GameScore = 0;
+        draw = 0;
+        displayP1MatchScore(player1GameScore);
+        displayP2MatchScore(player2GameScore);
+        displayP1Score(player1Score);
+        displayP2Score(player2Score);
+        displayDraws("-");
     }
 
     public void draw(View view) {

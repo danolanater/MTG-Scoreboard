@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private int player2Score = 20;
     private int player1GameScore = 0;
     private int player2GameScore = 0;
+    private int draw = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,23 @@ public class MainActivity extends AppCompatActivity {
     public void displayP2MatchScore(int matchScore) {
         TextView p2MatchScore = (TextView) findViewById(R.id.player2_match_score);
         p2MatchScore.setText(String.valueOf(matchScore));
+    }
+
+    public void displayDraws(int draws) {
+        TextView drawsView = (TextView) findViewById(R.id.draws_view);
+        drawsView.setText(String.valueOf(draws));
+    }
+
+    public void reset(View view) {
+        player1Score = 20;
+        player2Score = 20;
+        displayP1Score(player1Score);
+        displayP2Score(player2Score);
+    }
+
+    public void draw(View view) {
+        ++draw;
+        displayDraws(draw);
     }
 
     public void player1Victory(View view) {

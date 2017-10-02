@@ -8,11 +8,11 @@ TODO:
 
 ~~Program increment/decrement buttons~~
 
-~~Add Player 1/Player 2 victory buttons
+~~Add Player 1/Player 2 victory buttons~~
 
-~~Program Draw button
+~~Program Draw button~~
 
-~~Program Reset button
+~~Program Reset button~~
 
 Program Undo button
 

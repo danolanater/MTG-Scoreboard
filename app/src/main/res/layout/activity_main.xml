@@ -27,6 +27,7 @@
             android:layout_height="48dp"
             android:layout_alignEnd="@+id/score"
             android:layout_below="@+id/score"
+            android:onClick="decrementP1"
             android:layout_marginEnd="30dp"
             android:text="-" />
 
@@ -42,6 +43,7 @@
 
         <Button
             android:id="@+id/increase_button"
+            android:onClick="incrementP1"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignBaseline="@+id/decrease_button"
@@ -84,6 +86,7 @@
                     android:textAlignment="center" />
 
                 <TextView
+                    android:id="@+id/player1_match_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -91,6 +94,7 @@
                     android:textSize="72sp" />
 
                 <Button
+                    android:onClick="player1Victory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Victory"
@@ -135,6 +139,8 @@
                     android:textAlignment="center" />
 
                 <TextView
+                    android:id="@+id/player2_match_score"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -142,6 +148,7 @@
                     android:textSize="72sp" />
 
                 <Button
+                    android:onClick="player2Victory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Victory"
@@ -171,6 +178,7 @@
 
         <Button
             android:id="@+id/decrease_button2"
+            android:onClick="decrementP2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignEnd="@+id/score2"
@@ -190,6 +198,7 @@
 
         <Button
             android:id="@+id/increase_button2"
+            android:onClick="incrementP2"
             android:layout_width="48dip"
             android:layout_height="48dip"
             android:layout_alignBaseline="@+id/decrease_button2"

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Magic Scoreboard</string>
+    <string name="match_history">Match History</string>
 </resources>

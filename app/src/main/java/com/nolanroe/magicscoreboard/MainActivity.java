@@ -2,8 +2,9 @@ package com.nolanroe.magicscoreboard;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private int player2GameScore = 0;
     private int draw = 0;
     private DatabaseHelper myDb;
-    private Button saveButton;
     private EditText player1;
 
     @Override
@@ -24,8 +24,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDb = new DatabaseHelper(this);
-        saveButton = (Button) findViewById(R.id.save);
         player1 = (EditText) findViewById(R.id.Player1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
     }
 
     public String getResult() {
@@ -81,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newMatch(View view) {
+        addData(view);
         player1Score = 20;
         player2Score = 20;
         player1GameScore = 0;

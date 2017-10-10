@@ -16,14 +16,18 @@ TODO:
 
 Program Undo button
 
-Program Save button
+~~Program Save button~~
 
-Create Drop down Menu
+~~Create Drop down Menu~~
 
-Create Match History Menu option
+~~Create Match History Menu option~~
 
-SQLite Database to store match history
+~~SQLite Database to store match history~~
 
 Display Match History
 
 Create XML compatability for multiple devices
+
+Create different layouts for different game modes
+
+Allow for user profiles

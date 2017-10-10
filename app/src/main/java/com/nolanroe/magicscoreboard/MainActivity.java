@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private int player1GameScore = 0;
     private int player2GameScore = 0;
     private int draw = 0;
-    DatabaseHelper myDb;
-    Button saveButton;
+    private DatabaseHelper myDb;
+    private Button saveButton;
+    private EditText player1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +25,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         myDb = new DatabaseHelper(this);
         saveButton = (Button) findViewById(R.id.save);
+        player1 = (EditText) findViewById(R.id.Player1);
     }
 
-    public void addData() {
-        saveButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+    public String getResult() {
+        String result;
+        if (player1GameScore == 2)
+            result = "Loss";
+        else if (player2GameScore == 2)
+            result = "Win";
+        else
+            result = "Draw";
+        return result;
     }
+
+    public void addData(View view) {
+        boolean inserted = myDb.insertData(player1.getText().toString(), "Draft", getResult());
+        if (inserted)
+            Toast.makeText(MainActivity.this, "Game Saved!", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(MainActivity.this, "Error saving game", Toast.LENGTH_LONG).show();
+    }
+
 
     public void displayP1Score(int scored) {
         TextView p1Score = (TextView) findViewById(R.id.score);

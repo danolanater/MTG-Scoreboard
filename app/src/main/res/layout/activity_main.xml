@@ -12,8 +12,10 @@
         android:layout_weight="0"
         tools:context="com.nolanroe.magicscoreboard.MainActivity">
 
-        <TextView
+        <EditText
             android:id="@+id/Player1"
+            android:maxLines="1"
+            android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -175,8 +177,10 @@
         android:layout_weight="1"
         tools:context="com.nolanroe.magicscoreboard.MainActivity">
 
-        <TextView
+        <EditText
             android:id="@+id/Player2"
+            android:maxLines="1"
+            android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -238,10 +242,11 @@
             android:text="New Game" />
 
         <Button
+            android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Undo" />
+            android:text="Save" />
 
 
     </LinearLayout>

@@ -3,6 +3,7 @@ package com.nolanroe.magicscoreboard;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,11 +13,24 @@ public class MainActivity extends AppCompatActivity {
     private int player1GameScore = 0;
     private int player2GameScore = 0;
     private int draw = 0;
+    DatabaseHelper myDb;
+    Button saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDb = new DatabaseHelper(this);
+        saveButton = (Button) findViewById(R.id.save);
+    }
+
+    public void addData() {
+        saveButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     public void displayP1Score(int scored) {

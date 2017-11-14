@@ -17,9 +17,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MatchHistory">
+        <activity android:name=".MatchHistoryDisplay">
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

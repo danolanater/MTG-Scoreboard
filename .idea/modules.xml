@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MTG-Scoreboard.iml" filepath="$PROJECT_DIR$/MTG-Scoreboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MagicScoreboard.iml" filepath="$PROJECT_DIR$/MagicScoreboard.iml" />
+      <module fileurl="file://C:\Users\Danolanater\Desktop\Programming\SideProjects\MTG-Scoreboard\MagicScoreboard.iml" filepath="C:\Users\Danolanater\Desktop\Programming\SideProjects\MTG-Scoreboard\MagicScoreboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

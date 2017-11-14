@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.match_history:
-                Intent i = new Intent(this, MatchHistory.class);
+                Intent i = new Intent(this, MatchHistoryDisplay.class);
                 startActivity(i);
                 return true;
             default:

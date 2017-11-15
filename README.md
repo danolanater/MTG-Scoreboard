@@ -24,7 +24,7 @@ Program Undo button
 
 ~~SQLite Database to store match history~~
 
-Display Match History
+~~Display Match History~~
 
 Create XML compatability for multiple devices
 

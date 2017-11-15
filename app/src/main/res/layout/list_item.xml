@@ -25,7 +25,7 @@
             android:layout_height="78dp"
             android:layout_margin="4dp"
             android:background="@drawable/circle"
-            android:backgroundTint="#F8FAE2"
+            android:backgroundTint="#F8F9F9"
             android:fontFamily="serif"
             android:gravity="center"
             android:text="W"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#F8FAE2">
+        android:background="#F8F9F9">
 
         <TextView
             android:id="@+id/opponent_name_textview"

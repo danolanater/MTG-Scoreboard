@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/record_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Overall Record: 23/32/1"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#000000"></View>
+
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

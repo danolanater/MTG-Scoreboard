@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,9 @@ import java.util.ArrayList;
 public class MatchHistoryDisplay extends AppCompatActivity {
 
     private DatabaseHelper myDb = new DatabaseHelper(this);
+    private int wins = 0;
+    private int losses = 0;
+    private int draws = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,13 +30,21 @@ public class MatchHistoryDisplay extends AppCompatActivity {
 
         final ArrayList<MatchHistory> matches = new ArrayList<>();
         matches.add(new MatchHistory("OpponentName", "GameType", "#-#", "Date", "Win"));
-        if(res.getCount() == 0) {
 
-        }
         while(res.moveToNext()) {
             matches.add(new MatchHistory(res.getString(1), res.getString(2),res.getString(3),
                     res.getString(4),res.getString(5)));
+            String result = res.getString(5);
+            if(result.equals("Win"))
+                wins++;
+            else if (result.equals("Loss"))
+                losses++;
+            else
+                draws++;
         }
+
+        TextView record = (TextView) findViewById(R.id.record_textview);
+        record.setText("Overall Record: " + wins + "/" + losses + "/" + draws);
 
         ListAdapter adapter = new MatchHistoryAdapter(this, matches);
         ListView listView = (ListView) findViewById(R.id.list);

@@ -11,16 +11,19 @@
         android:orientation="vertical">
 
         <View
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/square"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
             android:background="@drawable/square"
+
             >
         </View>
 
         <TextView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="5dp"
+            android:id="@+id/big_letter"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_margin="4dp"
             android:background="@drawable/circle"
             android:backgroundTint="#F8FAE2"
             android:fontFamily="serif"

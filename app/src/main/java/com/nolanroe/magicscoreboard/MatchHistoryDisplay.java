@@ -17,8 +17,6 @@ public class MatchHistoryDisplay extends AppCompatActivity {
 
     private DatabaseHelper myDb = new DatabaseHelper(this);
 
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +37,6 @@ public class MatchHistoryDisplay extends AppCompatActivity {
         ListAdapter adapter = new MatchHistoryAdapter(this, matches);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
-
-
-
-
 
     }
 }

@@ -39,15 +39,15 @@ public class MatchHistoryAdapter extends ArrayAdapter<MatchHistory> {
         View squareView = (View) listItemView.findViewById(R.id.square);
         if(currentMatch.getmResult().equals("Win")) {
             bigLetterView.setText("W");
-            squareView.setBackgroundColor(Color.parseColor("#008000"));
+            squareView.setBackgroundColor(Color.parseColor("#28B463"));
         }
         else if(currentMatch.getmResult().equals("Loss")) {
             bigLetterView.setText("L");
-            squareView.setBackgroundColor(Color.parseColor("#FF0000"));
+            squareView.setBackgroundColor(Color.parseColor("#CB4335"));
         }
         else {
             bigLetterView.setText("D");
-            squareView.setBackgroundColor(Color.parseColor("#A6A6A6"));
+            squareView.setBackgroundColor(Color.parseColor("#A6ACAF"));
         }
         TextView opponentNameView = (TextView) listItemView.findViewById(R.id.opponent_name_textview);
         opponentNameView.setText(currentMatch.getmOpponentName());

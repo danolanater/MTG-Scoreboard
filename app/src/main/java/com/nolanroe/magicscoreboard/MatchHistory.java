@@ -5,50 +5,37 @@ package com.nolanroe.magicscoreboard;
  */
 
 public class MatchHistory  {
-    private DatabaseHelper myDb;
 
     public String getmOpponentName() {
         return mOpponentName;
-    }
-
-    public void setmOpponentName(String mOpponentName) {
-        this.mOpponentName = mOpponentName;
     }
 
     public String getmGameType() {
         return mGameType;
     }
 
-    public void setmGameType(String mGameType) {
-        this.mGameType = mGameType;
-    }
-
     public String getmMatchScore() {
         return mMatchScore;
-    }
-
-    public void setmMatchScore(String mMatchScore) {
-        this.mMatchScore = mMatchScore;
     }
 
     public String getmDate() {
         return mDate;
     }
 
-    public void setmDate(String mDate) {
-        this.mDate = mDate;
-    }
+    public String getmResult() { return mResult;}
 
     private String mOpponentName;
     private String mGameType;
     private String mMatchScore;
     private String mDate;
+    private String mResult;
 
-    public MatchHistory(String opponentName, String gameType, String matchScore, String date) {
+    public MatchHistory(String opponentName, String gameType, String matchScore, String date, String result) {
         mOpponentName = opponentName;
         mGameType = gameType;
-        mMatchScore = matchScore;
+        mResult = result;
         mDate = date;
+        mMatchScore = matchScore;
     }
 
 

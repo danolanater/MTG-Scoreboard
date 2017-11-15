@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     private int player1Score = 20;
@@ -60,8 +63,19 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
+    public String getScores() {
+        return player2GameScore + "-" + player1GameScore + "-" + draw;
+    }
+
+    public String getDate() {
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyy");
+        return simpleDateFormat.format(calendar.getTime());
+    }
+
     public void addData(View view) {
-        boolean inserted = myDb.insertData(player1.getText().toString(), "Draft", getResult());
+        boolean inserted = myDb.insertData(player1.getText().toString(), "Draft",
+                getScores(), getDate(), getResult());
         if (inserted)
             Toast.makeText(MainActivity.this, "Game Saved!", Toast.LENGTH_LONG).show();
         else

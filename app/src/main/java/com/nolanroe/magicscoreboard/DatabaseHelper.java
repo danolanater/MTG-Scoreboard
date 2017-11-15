@@ -17,18 +17,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_1 = "ID";
     public static final String COL_2 = "opponent";
     public static final String COL_3 = "game_type";
-    public static final String COL_4 = "result";
+    public static final String COL_4 = "match_score";
+    public static final String COL_5 = "date";
+    public static final String COL_6 = "result";
 
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
-        SQLiteDatabase db = this.getWritableDatabase();
+        super(context, DATABASE_NAME, null, 5);
+        //SQLiteDatabase db = this.getWritableDatabase();
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "OPPONENT TEXT, GAME_TYPE TEXT, RESULT TEXT)");
+                "OPPONENT TEXT, GAME_TYPE TEXT, MATCH_SCORE TEXT, DATE TEXT, RESULT TEXT)");
     }
 
     @Override
@@ -37,14 +39,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String opponent, String gameType, String result) {
+    public boolean insertData(String opponent, String gameType, String matchScore, String date, String result) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, opponent);
         contentValues.put(COL_3, gameType);
-        contentValues.put(COL_4, result);
-        long results = db.insert(TABLE_NAME, null, contentValues);
-        if(results == -1)
+        contentValues.put(COL_4, matchScore);
+        contentValues.put(COL_5, date);
+        contentValues.put(COL_6, result);
+        long data = db.insert(TABLE_NAME, null, contentValues);
+        if(data == -1)
             return false;
         else
              return true;

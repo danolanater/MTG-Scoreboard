@@ -31,7 +31,8 @@ public class MatchHistoryDisplay extends AppCompatActivity {
         final ArrayList<MatchHistory> matches = new ArrayList<>();
         matches.add(new MatchHistory("OpponentName", "GameType", "#-#", "Date", "Win"));
 
-        while(res.moveToNext()) {
+        res.moveToLast();
+         do {
             matches.add(new MatchHistory(res.getString(1), res.getString(2),res.getString(3),
                     res.getString(4),res.getString(5)));
             String result = res.getString(5);
@@ -41,7 +42,7 @@ public class MatchHistoryDisplay extends AppCompatActivity {
                 losses++;
             else
                 draws++;
-        }
+        } while(res.moveToPrevious());
 
         TextView record = (TextView) findViewById(R.id.record_textview);
         record.setText("Overall Record: " + wins + "/" + losses + "/" + draws);

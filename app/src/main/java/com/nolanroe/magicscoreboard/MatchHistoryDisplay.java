@@ -3,7 +3,7 @@ package com.nolanroe.magicscoreboard;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * Created by Danolanater on 11/14/2017.
  */
 
-public class MatchHistoryDisplay extends AppCompatActivity {
+public class MatchHistoryDisplay extends FragmentActivity {
 
     private DatabaseHelper myDb = new DatabaseHelper(this);
     private int wins = 0;

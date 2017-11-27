@@ -39,9 +39,16 @@ public class MainActivity extends FragmentActivity {
 
     public void buttonPressed(View view) {
         if(view == findViewById(R.id.new_game_button)) {
-            Intent i = new Intent();
-
-
+            Intent i = new Intent(getApplicationContext(), GameTypeMenuActivity.class);
+            startActivity(i);
+        }
+        else if (view == findViewById(R.id.match_history_button)) {
+            Intent i = new Intent(getApplicationContext(), MatchHistoryDisplay.class);
+            startActivity(i);
+        }
+        else if (view == findViewById(R.id.settings_button)) {
+            Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(i);
         }
     }
 

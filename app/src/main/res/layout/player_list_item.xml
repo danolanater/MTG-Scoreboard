@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/player_name"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:maxLength="30"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:textSize="32dp" />
+
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/player_name"
+        android:background="@android:color/transparent"
+
+        android:text="-"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/life_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="48dp"
+        android:layout_toEndOf="@+id/player_name"
+        android:padding="8dp"
+        android:text="20"
+        android:textColor="#ffffff"
+        android:textSize="32dp" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/minus_button"
+        android:background="@android:color/transparent"
+        android:text="+"
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.25"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MagiScore"
+            android:fontFamily="cursive"
+            android:textAlignment="center"
+            android:textSize="48dp"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:onClick="onClick"
+            android:id="@+id/fish_button"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:paddingLeft="32dp"
+            android:src="@mipmap/fish" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/new_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_shape_button"
+            android:text="New Game"
+            android:fontFamily="cursive"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="32sp"
+            />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/match_history_button"
+            android:layout_marginTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:background="@drawable/round_shape_button"
+            android:text="Match History"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="32sp" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/settings_button"
+            android:layout_marginTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:background="@drawable/round_shape_button"
+            android:text="Settings"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
